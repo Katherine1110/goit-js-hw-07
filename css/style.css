@@ -1,0 +1,28 @@
+li {
+    list-style: none;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#gallery {
+    padding-left: 0;
+}
+
+img {
+    width: 650px;
+    height: 400px;
+}
+
+
+#validation-input {
+    border: 3px solid #bdbdbd;
+  }
+  
+#validation-input.valid {
+    border-color: #4caf50;
+  }
+  
+#validation-input.invalid {
+    border-color: #f44336;
+  }
