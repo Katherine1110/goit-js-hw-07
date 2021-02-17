@@ -2,11 +2,12 @@
 // проверял его содержимое на правильное количество символов.
 
 const inputRef = document.querySelector('#validation-input');
+const dataLength = inputRef.dataset.length;
 
 inputRef.addEventListener('blur', onInputClick);
 
 function onInputClick (event) {
-    if (event.currentTarget.value.length === 6) {
+    if (event.currentTarget.value.length == dataLength) {
         inputRef.classList.add('valid');
         inputRef.classList.remove('invalid');
       } else {

@@ -8,20 +8,23 @@ const onIncrementBtnClick = document.querySelector('[data-action="increment"]');
 const onDecrementBtnClick = document.querySelector('[data-action="decrement"]');
 const value = document.querySelector('#value');
 
-onIncrementBtnClick.addEventListener('click', increment);
-onDecrementBtnClick.addEventListener('click', decrement);
-
 let counterValue = 0;
 
-function increment () {
-    counterValue += 1;
-    return value.textContent = counterValue;
-};
+const increment = () => {
+    return (counterValue += 1);
+  };
+  
+const decrement = () => {
+    return (counterValue -= 1);
+  };
 
-function decrement () {
-    counterValue -= 1;
-    return value.textContent = counterValue;
-};
+onIncrementBtnClick.addEventListener('click', () => {
+    value.textContent = increment();
+  });
+  
+onDecrementBtnClick.addEventListener('click', () => {
+    value.textContent = decrement();
+  });
 
 
 
